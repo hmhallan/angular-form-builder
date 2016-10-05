@@ -77,11 +77,11 @@ angular.module 'app', ['builder', 'builder.components', 'validator.rules']
     textbox = $builder.addFormObject 'default',
         id: 'textbox'
         component: 'textInput'
-        label: 'Name'
-        description: 'Your name'
-        placeholder: 'Your name'
+        label: 'Nome'
+        description: 'Seu nome'
+        placeholder: 'Digite seu nome aqui'
         required: yes
-        editable: no
+        editable: yes
     checkbox = $builder.addFormObject 'default',
         id: 'checkbox'
         component: 'checkbox'
@@ -100,7 +100,7 @@ angular.module 'app', ['builder', 'builder.components', 'validator.rules']
     $scope.input = []
     $scope.defaultValue = {}
     # formObjectId: default value
-    $scope.defaultValue[textbox.id] = 'default value'
+    #$scope.defaultValue[textbox.id] = 'default value'
     $scope.defaultValue[checkbox.id] = [yes, yes]
 
     $scope.submit = ->

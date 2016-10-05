@@ -33,7 +33,7 @@
                             Show scope
                         </label>
                     </div>
-                    <pre ng-if="isShowScope">{{form}}</pre>
+                    <pre ng-if="isShowScope">{{form | json}}</pre>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                 Show scope
             </label>
         </div>
-        <pre ng-if="isShowScope">{{input}}</pre>
+        <pre ng-if="isShowScope">{{input | json}}</pre>
     </div>
 
     <div class="row">

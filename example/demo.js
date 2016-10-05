@@ -40,11 +40,11 @@
       textbox = $builder.addFormObject('default', {
         id: 'textbox',
         component: 'textInput',
-        label: 'Name',
-        description: 'Your name',
-        placeholder: 'Your name',
+        label: 'Nome',
+        description: 'Seu nome',
+        placeholder: 'Digite seu nome aqui',
         required: true,
-        editable: false
+        editable: true
       });
       checkbox = $builder.addFormObject('default', {
         id: 'checkbox',
@@ -59,7 +59,6 @@
       $scope.form = $builder.forms['default'];
       $scope.input = [];
       $scope.defaultValue = {};
-      $scope.defaultValue[textbox.id] = 'default value';
       $scope.defaultValue[checkbox.id] = [true, true];
       return $scope.submit = function() {
         return $validator.validate($scope, 'default').success(function() {
